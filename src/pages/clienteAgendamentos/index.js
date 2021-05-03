@@ -1,4 +1,5 @@
 import React from "react";
+import './index.css'
 
  
 
@@ -7,7 +8,7 @@ import React from "react";
     return(
 
       <div>
-        
+           
         <h1> 
             Cliente - Agendamentos   
         </h1>

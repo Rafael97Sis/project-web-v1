@@ -1,0 +1,43 @@
+.container-Cliente-Agenda{
+    /* border: 1px solid black; */
+    padding: 20.6rem ;
+    /* width: 15px; */
+    /* height: 15px; */
+    /* left: 25px; */
+    margin-left: 14%;
+    position: relative;
+}
+
+.title-cliente-Agenda{
+padding: 25px;
+    position: absolute;
+    left: 2%;
+    top: -25px;
+    font-size: 36px;
+    color: #9346F4;
+}
+
+.buttom-adiciona-calendario{
+    color: floralwhite;
+    border-color:  #9346F4;
+    
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    left: 4%;
+    top: 12%;
+
+    background: #9346F4;
+    border-radius: 10px;
+
+}
+
+.buttom-apagar-calendario{
+
+    position: absolute;
+    width: 120px;
+    height: 25px;
+    left: 12%;
+    top: 12%;
+
+}

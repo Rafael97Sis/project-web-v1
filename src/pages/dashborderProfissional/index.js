@@ -38,7 +38,6 @@ function DashboarderProfissional() {
         </div>
 
         <div className='box-comentarios'>
-
         <ul style={{listStyle:'none'}}> 
             <li className='list-view-dados'>
                <a>#</a>
