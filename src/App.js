@@ -7,7 +7,7 @@ import home from './pages/home'
 import Login from './pages/login'
 import Cadastro from './pages/cadastro'
 import ClienteAgenda from './pages/clienteAgenda'
-import ClienteAgendamento from './pages/clienteAgendamento'
+import ClienteAgendamentos from './pages/clienteAgendamentos'
 import DashborderCliente from './pages/dashborderCliente'
 import DashboarderProfissional from './pages/dashborderProfissional'
 
@@ -27,7 +27,7 @@ function App() {
 
         <Route exact path='/ClienteAgenda' component={ClienteAgenda} />
 
-        <Route exact path='/clienteAgendamento' component={ClienteAgendamento} />
+        <Route exact path='/clienteAgendamentos' component={ClienteAgendamentos} />
 
         <Route exact path='/dashborderCliente' component={DashborderCliente} />
 

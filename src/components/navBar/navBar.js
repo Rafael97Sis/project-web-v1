@@ -20,7 +20,7 @@ function NavBar() {
                         <a className='lista-menu'> <Link> Preços </Link> </a>
                         <a className='lista-menu'> <Link> Contato </Link>  </a>
                         <a className='button-branco'  >
-                            <Link to='/login' >  Cadastrar! </Link> </a>
+                            <Link to='/Login'  style={{color:'#FFFFFF'}} >  ACESSAR CONTA </Link> </a>
                     </li>
                 </ul>
 

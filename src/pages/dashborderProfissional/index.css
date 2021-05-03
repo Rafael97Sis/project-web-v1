@@ -1,0 +1,131 @@
+.container-Dashboarder-Profissional{
+    border: 1px solid red;
+    padding: 24.2% ;
+    /* width: 15px; */
+    /* height: 15px; */
+    /* left: 25px; */
+    margin-left: 14%;
+    position: relative;
+}
+
+.title-dashborder{
+    /* border: 1px solid blue; */
+    padding: 25px;
+    position: absolute;
+    left: 2%;
+    top: -25px;
+    font-size: 36px;
+    color: #9346F4;
+
+}
+
+.box-agendados{
+    border: 1px solid red;
+    /* padding: 5rem ;
+    width: 15px;
+    height: 15px;
+    left: 25px; */
+
+    position: absolute;
+    width: 550px;
+    height: 35%;
+    left: 20px;
+    top: 14%;
+
+    background: #CFF790;
+    /* border: 1px solid #CFF790; */
+    box-sizing: border-box;
+
+}
+
+.box-aguardando{
+    border: 1px solid red;
+    /* padding: 5rem ;
+    width: 15px;
+    height: 15px;
+    left: 25px; */
+
+    position: absolute;
+    width: 550px;
+    height: 35%;
+    left: 51%;
+    top: 14%;
+
+    background: #FEF074;
+
+}
+
+.box-usuarios{
+    border: 1px solid red;
+    /* padding: 7rem ;
+    width: 15px;
+    height: 15px;
+    left: 25px; */
+
+    position: absolute;
+    width: 550px;
+    height: 45%;
+    left: 20px;
+    top: 52%;
+
+    background: #FFFFFF;
+    /* opacity: 0.5; */
+    border: 3px solid #9346F4;
+    /* box-sizing: border-box; */
+
+}
+
+.list-view-dados a{
+    color: black;
+    font-size: 18px;
+    font: 18px;
+    list-style: none;
+    text-decoration: none;
+    margin: 85px;
+    margin-left: -15px;
+}
+
+.title-box{
+    color: blueviolet;
+    font-size: 30px;
+    margin-left: 26px;
+    font-style: italic;
+}
+
+.quantidade-box{
+    color: blueviolet;
+    margin-left: 65px;
+    font-size: 80px;
+    font-style: normal;
+    top: 90px;
+    height: 35px;
+    margin-top: 12px;
+}
+
+
+.tipo-box{
+    color: blueviolet;
+    margin-left: 28px;
+    font-size: de;
+    margin-top: 30px;
+}
+
+.box-comentarios{
+    border: 1px solid red;
+    /* padding: 7rem ;
+    width: 15px;
+    height: 15px;
+    left: 25px; */
+
+    position: absolute;
+    width: 550px;
+    height: 45%;
+    left: 51%;
+    top: 52%;
+
+    /* background: #FFFFFF; */
+    /* opacity: 0.5; */
+    border: 3px solid #9346F4;
+    box-sizing: border-box;
+
+}

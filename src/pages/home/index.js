@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NavBar from "../../components/navBar/navBar";
 import './index.css'
 
@@ -42,7 +43,8 @@ function Home() {
           <form>
             <input className='email-form' name='email' type='email' placeholder="Digite seu Email"
               style={{ backgroundColor: '9346F4' }} />
-            <button style={{ backgroundColor: '#9346F4', width:'20%',height:'1.9rem' , color: '#F0F8FF', borderColor:'#9346F4' , borderRadius:'3px'  }} > Cadastrar! </button>
+            <button onClick='/Cadastro' to='/Cadastro'> <Link to='/Cadastro' style={{ backgroundColor: '#9346F4', width:'20%',height:'1.9rem' , 
+            color: '#F0F8FF', borderColor:'#9346F4' , borderRadius:'3px' }} > cadastro </Link> </button>
           </form>
 
          

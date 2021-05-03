@@ -1,0 +1,97 @@
+.box-lado-esquerdo{
+
+    position: absolute;
+width: 50%;
+height: 100%;
+left: 0px;
+top: 0px;
+background: #FEF074;
+
+}
+
+
+
+.box-lado-direito{
+
+    
+    /* border: 1px solid black; */
+
+    position: relative;
+    width: 30%;
+    height: 70%;
+    left: 63%;
+    top: 50px;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #9346F4;
+
+    
+}
+
+.icon-navBar-login{
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 20%;
+
+
+}
+
+.form-dados-1{
+
+    position: static;
+    width: 100%;
+    height: 40px;
+    left: 8px;
+    top: 40%;
+
+    background: #FFFFFF;
+    opacity: 9.8;
+    border: 3px solid #9346F4;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.form-dados-2{
+
+    position: static;
+    width: 100%;
+    height: 40px;
+    left: 8px;
+    top: 55%;
+
+    background: #FFFFFF;
+    opacity: 0.8;
+    border: 3px solid #9346F4;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+
+
+
+.box-senha{
+    
+    font-size: 16px;
+    color:  #9346F4;
+}
+
+.button-form-dados{
+    position: relative;
+    font-size: 18px;
+    background-Color: #9346F4;
+    width: 100%;
+    height: 40px;
+    color: #F0F8FF;
+    border-Color: #9346F4;
+    border-Radius: 3px;
+
+}
