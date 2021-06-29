@@ -9,7 +9,11 @@ function NavBar() {
 
         <div className='container-NavBar'>
 
-            <img className='icon-navBar' src='/logotipo_indie.svg' />
+            <a href="/">
+            {/* <Link to="/"/> */}
+                <img className='icon-navBar' src='/logotipo_indie.svg' to="/" /> 
+            </a>
+           
 
             <div className='Botoes-Barra-Menu' >
 

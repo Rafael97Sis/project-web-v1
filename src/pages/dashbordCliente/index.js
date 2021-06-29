@@ -1,6 +1,6 @@
 import React from "react";
 import './index.css'
-import NavBarLAteral from "../../components/navBarLateral/navBarLateral";
+import NavBarCliente from "../../components/navBarCliente/navBarCliente";
 
 
 
@@ -8,7 +8,7 @@ function DashbordCliente() {
 
   return (
     <div>
-      <NavBarLAteral />
+      <NavBarCliente/>
 
       <div className='container-Dashboarder-Cliente' >
 
@@ -22,6 +22,7 @@ function DashbordCliente() {
           <p className='tipo-box-cliente' >CONFIRMADOS</p>
         </div>
 
+        <li></li>
         <div className='box-01'>
         <p style={{fontStyle:'italic', color:'#9346f4', fontSize:'18px'}} >COMENTARIOS RECENTES</p>
           <ul style={{ listStyle: 'none' }}>

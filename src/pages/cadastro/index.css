@@ -8,15 +8,15 @@
 
     position: relative;
     width: 60%;
-    height: 60%;
+    /* height: 40%; */
     left: 20%;
-    top: 20px;
+    top: 10px;
     text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 10px;
-    line-height: 42px;
+    line-height: 40px;
     
 }
 
@@ -65,8 +65,8 @@ border-radius: 10px;
     position: relative;
     font-size: 18px;
     background-Color: #9346F4;
-    width: 100%;
-    height: 40px;
+    width: 70%;
+    height: 30px;
     color: #F0F8FF;
     border-Color: #9346F4;
     border-Radius: 3px;
@@ -83,10 +83,10 @@ border-radius: 10px;
 
     position: static;
     width: 48%;
-    height: 38px;
+    height: 30px;
     margin-left: 10px;
 
-    margin-right:5px;
+    margin-right:1px;
 
     background: #FFFFFF;
 
@@ -101,9 +101,9 @@ border-radius: 10px;
 
 position: absolute;
 width: 100%;
-height: 5%;
+height: 4%;
 left: 0px;
-top: 95%;
+top: 96%;
 
 background: #9346F4;
 

@@ -144,13 +144,14 @@ function Cadastro() {
 
           <input className='form-checkbox' type="checkbox" id="profissional" name="profissional" value="Bike" />
           <label className='form-checkbox' for="profissional"> Profissional </label> */}
-          {/* <h2 style={{ color: '#9346F4', fontSize: '16px' }} >  Tipo de Segmento? </h2>
+          
+          <h2 style={{ color: '#9346F4', fontSize: '16px' }} >  Tipo de Segmento? </h2>
 
           <select className="segmento">
             <option value="informatica">Informatica</option>
             <option value="eletrica">Eletrica</option>
             <option value="segmento" selected> Selecione seu tipo de Segmento</option>
-          </select> */}
+          </select>
 
           <button className='button-cadastra'> Cadastrar </button>
 
@@ -158,7 +159,7 @@ function Cadastro() {
 
       </div>
 
-      {/* <div className='roda-pe'></div> */}
+      <div className='roda-pe'></div>
 
 
     </div>

@@ -49,7 +49,7 @@ function Home() {
              style={{ backgroundColor: '#B6EC5E',
                       // width:'2px',
                       // height:'' , 
-                      padding:'6px',
+                      padding:'4px',
                       margin:'3px',
                       // color: '#F0F8FF',
                       color:'#9346F4',
@@ -60,6 +60,7 @@ function Home() {
           </form>         
         </div>
       </div>
+       <div className='roda-pe'></div>
     </div>
 
   )

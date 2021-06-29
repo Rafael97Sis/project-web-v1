@@ -30,7 +30,7 @@ height: 100;
 left: -5px;
 top: 160px;
 
-font-family:  ;
+/* font-family:  ; */
 font-style: normal;
 font-weight: 100;
 font-size: 35px;
@@ -64,9 +64,9 @@ margin-left: auto;
     position: absolute;
     /* text-align: ; */
     width: 850px;
-    left: 20%;
+    left: 25%;
     color: blueviolet;
-    padding: 25px ;
+    padding: 12px ;
 
     /* background-color: 3px solid blue; */
 }

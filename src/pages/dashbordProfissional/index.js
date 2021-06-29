@@ -1,13 +1,13 @@
 import React from "react";
 import './index.css'
-import NavBarLAteral from "../../components/navBarLateral/navBarLateral";
+import NavBarCliente from "../../components/navBarCliente/navBarCliente";
 
 
 function DashboardProfissional() {
 
   return (
     <div>
-      <NavBarLAteral />
+      <NavBarCliente />
 
       <div className='container-Dashboarder-Profissional' >
 
