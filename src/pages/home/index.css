@@ -25,9 +25,9 @@
 .texto-interno{
 
 position: absolute;
-width: 500px;
+width: 580px;
 height: 100;
-left: 50px;
+left: -5px;
 top: 160px;
 
 font-family:  ;
@@ -46,9 +46,9 @@ color: #FFFFFF;
 position: absolute;
 width: 150px;
 text-align: center;
-left: 352px;
-top: 400px;
-font-size: 18px;
+left: 325px;
+top: 415px;
+font-size: 22px;
 color: blueviolet;
 background: #FEF074;
 border-radius: 3px;
@@ -59,14 +59,16 @@ margin-left: auto;
 
 
 .container-cadastro{
+
+    
     position: absolute;
-    text-align: center;
-    width: 60%;
+    /* text-align: ; */
+    width: 850px;
     left: 20%;
     color: blueviolet;
-    padding: 1rem ;
+    padding: 25px ;
 
-    background-color: 1px solid red;
+    /* background-color: 3px solid blue; */
 }
 
 .email-form {
@@ -77,26 +79,23 @@ margin-left: auto;
     max-width: 250px;
 
     border-radius: 5.5em;
-
+    
     padding: 6px 25% ;
 
     margin-right: 1rem;
     outline: none;
     text-align: center;     
-    background-color: cornsilk;
+    
+    /* background-color: cornsilk; */
 
     /* padding: 5px 10.5rem; */
-    
-    
-    
-
 }
 
 .img-home{
 
     position: absolute;
     width: 500px;
-    height: 350px;
+    height: 409px;
     left: 660px;
     top: 20px;
 

@@ -3,8 +3,9 @@
     
     display: flex;
     height:  6rem;
-    border-bottom: 1px solid blueviolet ;
+    /* border-bottom: 1px solid blueviolet ; */
     align-items: center;
+    background-color:  #F9F7F7;
     
     
 }
@@ -38,6 +39,7 @@
 
 .icon-navBar{
     padding: 0 2rem;
+    width: 200px;
 
 }
 

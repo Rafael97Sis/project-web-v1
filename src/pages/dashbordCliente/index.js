@@ -4,7 +4,7 @@ import NavBarLAteral from "../../components/navBarLateral/navBarLateral";
 
 
 
-function DashborderCliente() {
+function DashbordCliente() {
 
   return (
     <div>
@@ -49,4 +49,4 @@ function DashborderCliente() {
 
   )
 
-} export default DashborderCliente;
+} export default DashbordCliente;

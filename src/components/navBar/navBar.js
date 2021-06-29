@@ -9,7 +9,7 @@ function NavBar() {
 
         <div className='container-NavBar'>
 
-            <img className='icon-navBar' src='/image-01.jpg' />
+            <img className='icon-navBar' src='/logotipo_indie.svg' />
 
             <div className='Botoes-Barra-Menu' >
 

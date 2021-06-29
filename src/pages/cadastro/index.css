@@ -23,7 +23,7 @@
 .form-dados-cadastro-0{
 
     position: static;
-    width: 98%;
+    width: 55%;
     height: 38px;
     
     background: #FFFFFF;
@@ -71,6 +71,29 @@ border-radius: 10px;
     border-Color: #9346F4;
     border-Radius: 3px;
     display: inline-block;
+}
+
+.segmento{
+
+    background: #FFFFFF;
+    opacity: 0.8;
+    border: 3px solid #9346F4;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    position: static;
+    width: 48%;
+    height: 38px;
+    margin-left: 10px;
+
+    margin-right:5px;
+
+    background: #FFFFFF;
+
+    border: 4px solid #9346F4;
+    box-sizing: border-box;
+    border-radius: 10px;
+
 }
 
 

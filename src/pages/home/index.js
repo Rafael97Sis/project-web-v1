@@ -19,12 +19,12 @@ function Home() {
           </p>
 
           <p className='texto-interno'>
-            Crie sua conta agora e teste grátis por 14 dias!
+          Se você é um profissional cadastre-se agora mesmo e teste grátis por 14 dias.
           </p>
 
 
 
-          <img className='img-home' src="/img-home.svg" />
+          <img className='img-home' src="/Imagem_Banner_1.svg" />
 
         </div>
       </div>
@@ -35,27 +35,32 @@ function Home() {
 
       <div className='container-cadastro'>
 
-      <h1 > Cadastre-se e receba nossas Atualizações diárias <img  style={{width:'25px', left:'2rem', margin:'-px' }} src='/refresh.svg' />  </h1>
+      <h1 > Cadastre-se e receba nossas Atualizações diárias 
+        <img className='img-atualiza' style={{ margin:'1%' , width:'23px', left:'76%', right:'15px' , position:'absolute'}} src='/refresh.svg' /> 
+      </h1>
       
 
         <div >
 
           <form>
-            <input className='email-form' name='email' type='email' placeholder="Digite seu Email"
-              style={{ backgroundColor: '9346F4' }} />
-            <button onClick='/Cadastro' to='/Cadastro'> <Link to='/Cadastro' style={{ backgroundColor: '#9346F4', width:'20%',height:'1.9rem' , 
-            color: '#F0F8FF', borderColor:'#9346F4' , borderRadius:'3px' }} > cadastro </Link> </button>
-          </form>
-
-         
+            <input className='email-form' name='email' type='email' placeholder="Digite-seu e-mail"
+             />
+            <a onClick='/Cadastro' to='/Cadastro'> <Link to='/Cadastro'
+             style={{ backgroundColor: '#B6EC5E',
+                      // width:'2px',
+                      // height:'' , 
+                      padding:'6px',
+                      margin:'3px',
+                      // color: '#F0F8FF',
+                      color:'#9346F4',
+                      fontSize:'18px',
+                      fontFamily:'roboto',
+                      // border:'2px solid black',
+                      borderRadius:'5px' }} > Inscrever-se </Link> </a>
+          </form>         
         </div>
       </div>
-
-
     </div>
-
-
-
 
   )
 };

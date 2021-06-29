@@ -3,7 +3,7 @@ import './index.css'
 import NavBarLAteral from "../../components/navBarLateral/navBarLateral";
 
 
-function DashboarderProfissional() {
+function DashboardProfissional() {
 
   return (
     <div>
@@ -50,10 +50,8 @@ function DashboarderProfissional() {
 
       </div>
 
-
     </div>
-
 
   )
 
-} export default DashboarderProfissional;
+} export default DashboardProfissional;

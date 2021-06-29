@@ -8,8 +8,8 @@ import Login from './pages/login'
 import Cadastro from './pages/cadastro'
 import ClienteAgenda from './pages/clienteAgenda'
 import ClienteAgendamentos from './pages/clienteAgendamentos'
-import DashborderCliente from './pages/dashborderCliente'
-import DashboarderProfissional from './pages/dashborderProfissional'
+import DashbordCliente from './pages/dashbordCliente'
+import DashboardProfissional from './pages/dashbordProfissional'
 
 
 function App() {
@@ -29,9 +29,9 @@ function App() {
 
         <Route exact path='/clienteAgendamentos' component={ClienteAgendamentos} />
 
-        <Route exact path='/dashborderCliente' component={DashborderCliente} />
+        <Route exact path='/dashbordCliente' component={DashbordCliente} />
 
-        <Route exact path='/dashboarderProfissional' component={DashboarderProfissional} />
+        <Route exact path='/dashboardProfissional' component={DashboardProfissional} />
 
       </Switch>
 
