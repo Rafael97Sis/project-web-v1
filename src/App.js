@@ -9,7 +9,7 @@ import Cadastro from './pages/cadastro'
 import ClienteAgenda from './pages/clienteAgenda'
 import ClienteAgendamentos from './pages/clienteAgendamentos'
 import DashbordCliente from './pages/dashbordCliente'
-import DashboardProfissional from './pages/dashbordProfissional'
+import DashbordProfissional from './pages/dashbordProfissional'
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
 
         <Route exact path='/dashbordCliente' component={DashbordCliente} />
 
-        <Route exact path='/dashboardProfissional' component={DashboardProfissional} />
+        <Route exact path='/dashbordProfissional' component={DashbordProfissional} />
 
       </Switch>
 

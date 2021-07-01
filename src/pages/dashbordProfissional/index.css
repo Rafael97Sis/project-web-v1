@@ -1,25 +1,25 @@
 .container-Dashboarder-Profissional{
-    border: 1px solid red;
-    padding: 24.2% ;
+    /* border: 1px solid red; */
+    padding: 17rem;
     /* width: 15px; */
     /* height: 15px; */
     /* left: 25px; */
-    margin-left: 14%;
+    /* margin-left: 14%; */
     position: relative;
 }
 
-.title-dashborder{
+.title-dashborder-Profissional{
     /* border: 1px solid blue; */
-    padding: 25px;
+    padding: 19px;
     position: absolute;
     left: 2%;
     top: -25px;
-    font-size: 36px;
+    font-size: 32px;
     color: #9346F4;
 
 }
 
-.box-agendados{
+.box-agendados-Profissional{
     border: 1px solid red;
     /* padding: 5rem ;
     width: 15px;
@@ -29,8 +29,8 @@
     position: absolute;
     width: 550px;
     height: 35%;
-    left: 20px;
-    top: 14%;
+    left: 3%;
+    top: 10%;
 
     background: #CFF790;
     /* border: 1px solid #CFF790; */
@@ -38,7 +38,7 @@
 
 }
 
-.box-aguardando{
+.box-aguardando-Profissional{
     border: 1px solid red;
     /* padding: 5rem ;
     width: 15px;
@@ -49,24 +49,23 @@
     width: 550px;
     height: 35%;
     left: 51%;
-    top: 14%;
+    top: 10%;
 
     background: #FEF074;
 
 }
 
-.box-usuarios{
+.box-usuarios-Profissional{
     border: 1px solid red;
     /* padding: 7rem ;
     width: 15px;
     height: 15px;
     left: 25px; */
-
     position: absolute;
     width: 550px;
     height: 45%;
-    left: 20px;
-    top: 52%;
+    left: 3%;
+    top: 50%;
 
     background: #FFFFFF;
     /* opacity: 0.5; */
@@ -75,7 +74,7 @@
 
 }
 
-.list-view-dados a{
+.list-view-dados-Profissional a{
     color: black;
     font-size: 18px;
     font: 18px;
@@ -85,17 +84,17 @@
     margin-left: -15px;
 }
 
-.title-box{
+.title-box-Profissional{
     color: blueviolet;
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 26px;
     font-style: italic;
 }
 
-.quantidade-box{
+.quantidade-box-Profissional{
     color: blueviolet;
     margin-left: 65px;
-    font-size: 80px;
+    font-size: 70px;
     font-style: normal;
     top: 90px;
     height: 35px;
@@ -103,15 +102,15 @@
 }
 
 
-.tipo-box{
+.tipo-box-Profissional{
     color: blueviolet;
     margin-left: 28px;
-    font-size: de;
-    margin-top: 30px;
+    /* font-size: de; */
+    margin-top: 3px;
 }
 
-.box-comentarios{
-    border: 1px solid red;
+.box-comentarios-Profissional{
+    /* border: 1px solid red; */
     /* padding: 7rem ;
     width: 15px;
     height: 15px;
@@ -121,7 +120,7 @@
     width: 550px;
     height: 45%;
     left: 51%;
-    top: 52%;
+    top: 50%;
 
     /* background: #FFFFFF; */
     /* opacity: 0.5; */

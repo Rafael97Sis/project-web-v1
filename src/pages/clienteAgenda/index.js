@@ -12,7 +12,8 @@ function ClienteAgenda() {
       <h1 className='title-cliente-Agenda'>
           Inicio / Agenda
         </h1>
-        <button className='buttom-adiciona-calendario'  > + Adicionar</button>
+        <button className='buttom-adiciona-calendari' src='/icon-apagar.svg'  > + Adicionar</button>
+
         <img className='buttom-apagar-calendario'  src='/icon-apagar.svg' onClick='apagar' ></img>
       </div>
 
