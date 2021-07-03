@@ -5,9 +5,9 @@ import './index.css'
 
 function Cadastro() {
 
-  const baseURL = "http://localhost:3006/cadastra";
+  const baseURL = "http://localhost:3006/cadastro";
 
-  const [cadastro, setCadastro] = useState({ nome: '', email: '', definicao: '', cnpj: '', cpf: '', telefone: '', cep: '', endereco: '', nro: '', bairro: '', senha: '' })
+  const [cadastro, setCadastro] = useState({ nome: '', email: '', definicao: '', cpf_ou_cnpj: '', telefone: '', cep: '', endereco: '', nro: '', bairro: '', senha: '', area_de_atuacao: '', especialidade: '' })
   //const [cadastroConta, setcadastroConta] = useState(cadastroContaState)
 
   const handleInputChange = (event) => {
@@ -37,9 +37,13 @@ function Cadastro() {
 
         <form onSubmit={(event) => {
           event.preventDefault();
-          //if(!cadastro.nome || !cadastro.email || !cadastro.definicao)return;
+
+          
+
+          //if(!cadastro.nome || !cadastro.email || !cadastro.definicao || !cadastro.cpf_ou_cnpj || !cadastro.telefone || !cadastro.cep || cadastro.endereco || !cadastro.nro || !cadastro.bairro || !cadastro.senha || !cadastro.area_de_atuacao || !cadastro.especialidade) return;
+          
           Cadastrar(cadastro)
-          setCadastro({ nome: '', email: '', definicao: '', cnpj: '', cpf: '', telefone: '', cep: '', endereco: '', nro: '', bairro: '', senha: '' })
+          setCadastro({ nome: '', email: '', definicao: '', cpf_ou_cnpj: '', telefone: '', cep: '', endereco: '', nro: '', bairro: '', senha: '', area_de_atuacao: '', especialidade: '' })
           alert("cadastro ok ")
         }}
         >
@@ -81,9 +85,9 @@ function Cadastro() {
 
           <input
             className='form-dados-cadastro-1'
-            name='cpf'
+            name='cpf_ou_cnpj'
             type='number'
-            value={cadastro.cpf}
+            value={cadastro.cpf_ou_cnpj}
             onChange={handleInputChange}
             placeholder="CNPJ ou CPF :" />
 
@@ -123,39 +127,47 @@ function Cadastro() {
 
           <h2 style={{ color: '#9346F4', fontSize: '16px' }} > Vocé é um cliente ou profissional? </h2>
 
-          <select 
+          <select className="segmento"
             name='definicao'
-            className="segmento"
             value={cadastro.definicao}
             onChange={handleInputChange}
           >
+            <option selected> Selecione seu tipo de Perfil </option>
             <option value="cliente"> Cliente </option>
 
             <option value="profissional"> Profissional </option>
 
-            <option value="perfil" selected> Selecione seu tipo de Perfil </option>
+            
           </select >
 
-          {/* <input className='form-checkbox' type="checkbox" id="cliente" name="cliente" value="Bike" />
-          <label className='form-checkbox'  for="cliente"> Cliente </label>
 
-          <input className='form-checkbox' type="checkbox" id="profissional" name="profissional" value="Bike" />
-          <label className='form-checkbox' for="profissional"> Profissional </label> */}
+          <h2 style={{ color: '#9346F4', fontSize: '16px' }} > Qual sua área de Atuação? </h2>
 
-          <h2 style={{ color: '#9346F4', fontSize: '16px' }} >  Tipo de Segmento? </h2>
-
-          <select className="segmento">
+          <select className="segmento"
+            name='area_de_atuacao'
+            value={cadastro.area_de_atuacao}
+            onChange={handleInputChange}
+          >
+            <option selected> Selecione sua Area de Atuação ! </option>
             <option value="informatica">Informatica</option>
             <option value="eletrica">Eletrica</option>
-            <option value="segmento" selected> Selecione seu tipo de Segmento</option>
+
           </select>
 
-          <h2 style={{ color: '#9346F4', fontSize: '16px' }} >  Qual seu  tipo de Especialidade ? </h2>
+          {/* inicio Especialidade  */}
+          <h2 style={{ color: '#9346F4', fontSize: '16px' }} >  Qual sua Especialidade ? </h2>
 
-          <select className="segmento">
-            <option value="informatica">Informatica</option>
+          <select className="segmento"
+            name='especialidade'
+            value={cadastro.especialidade}
+            onChange={handleInputChange}
+          >
+            <option selected > Selecione sua Especialidade! </option>
+            <option value="informatica">DBA</option>
             <option value="eletrica">Eletrica</option>
-            <option value="segmento" selected> Selecione seu tipo de Segmento</option>
+            <option value="informatica">Pragramador</option>
+            <option value="informatica">Tecnico Informatica </option>
+
           </select>
 
           <button className='button-cadastra'> Cadastrar </button>
