@@ -1,11 +1,11 @@
 .container-Cliente-Agenda{
-    /* border: 1px solid black;
-     */
-    padding: 20.6rem ;
+    /* border: 7px solid red; */
+    
+    padding: 21% ;
     /* width: 15px; */
     /* height: 15px; */
     /* left: 25px; */
-    margin-left: 14%;
+    /* margin-left: 14%; */
     position: relative;
 }
 
@@ -41,4 +41,93 @@ padding: 25px;
     left: 12%;
     top: 12%;
 
+}
+/*  Dados do container-add-agenda   */
+
+.container-add-agenda{
+    /* border: 7px solid red; */
+    padding: 25px;
+    width: 480px;
+    height: 550px;
+    position: absolute;
+
+    margin-left: 4.5%;
+    top: 30%;
+    /* flex: content; */
+
+}
+
+.input-title{
+    border-radius: 6px;
+    border: 4px solid;
+    border-color: blueviolet;
+    height: 5%;
+    width: 438px;
+    margin-left: 20px;
+    /* position: relative; */
+    
+
+}
+
+.input-select{
+    border-radius: 6px;
+    border: 4px solid;
+    border-color: blueviolet;
+    height: 7%;
+    width: 450px;
+    margin-left: 20px;
+
+}
+
+.input-date{
+    border-radius: 18px;
+    border-color: blueviolet;
+    height: 7%;
+    width: 200px;
+    margin-left: 20px;
+
+}
+
+.input-comentario{
+    border-radius: 3px;
+    border-color: blueviolet;
+    padding: 7%;
+    width: 80%;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.title-msg{
+    color: darkmagenta;
+    position: relative;
+    top: -120px;
+
+}
+
+.box-direita-foto{
+    border-color: darkmagenta;
+    padding: 2rem;
+    /* border: 4px solid red; */
+    position: relative;
+    /* margin-right: auto; */
+    height: 10%;
+    width: 12%;
+    margin-left: 65%;
+    margin-top: -30%;
+
+}
+
+.input-img{
+    border-radius: 18px;
+    border-color: blueviolet;
+    width: 170px;
+    height: 175px;
+    /* margin-left: 650px; */
+    top: 4px;
+}
+
+.title-foto{
+    color: darkmagenta;
+    /* position: relative; */
+    align-items: center;
 }
