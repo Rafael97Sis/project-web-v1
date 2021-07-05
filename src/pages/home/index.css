@@ -8,17 +8,18 @@
 }
 
 .texto-container{
-
+    /* border: 3px solid red; */
     position: absolute;
     width: 600px;
     left: 130px;
-    top: 120px;
+    top: 140px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 32px;
     line-height: 42px;
     color: #FEF074;
+    margin-top: 15px;
 
 }
 
@@ -33,7 +34,7 @@ top: 160px;
 /* font-family:  ; */
 font-style: normal;
 font-weight: 100;
-font-size: 35px;
+font-size: 32px;
 line-height: 50px;
 text-align: center;
 
@@ -42,19 +43,16 @@ color: #FFFFFF;
 }
 
 .texto-teste{
-
 position: absolute;
+top: 450px;
+left: 25%;
 width: 150px;
 text-align: center;
-left: 325px;
-top: 415px;
-font-size: 22px;
+font-size: 20px;
 color: blueviolet;
 background: #FEF074;
 border-radius: 3px;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-margin-left: auto;
-
 }
 
 

@@ -176,7 +176,7 @@ function Cadastro() {
 
       </div>
 
-      <div className='roda-pe'></div>
+      {/* <div className='roda-pe'></div> */}
 
 
     </div>

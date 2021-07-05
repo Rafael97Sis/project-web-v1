@@ -27,17 +27,19 @@ function Home() {
           <img className='img-home' src="/Imagem_Banner_1.svg" />
 
         </div>
+        <p className='texto-teste' > TESTE GRÁTIS </p>
+        
       </div>
-
-      <p className='texto-teste' > TESTE GRÁTIS </p>
+  
+      
 
       
 
       <div className='container-cadastro'>
 
-      <h1 > Cadastre-se e receba nossas Atualizações diárias 
+      <h2 > Cadastre-se e receba nossas Atualizações diárias 
         <img className='img-atualiza' style={{ margin:'1%' , width:'23px', left:'76%', right:'15px' , position:'absolute'}} src='/refresh.svg' /> 
-      </h1>
+      </h2>
       
 
         <div >
@@ -60,7 +62,7 @@ function Home() {
           </form>         
         </div>
       </div>
-       <div className='roda-pe'></div>
+       {/* <div className='roda-pe'></div> */}
     </div>
 
   )

@@ -15,8 +15,8 @@ function NavBarProfissional() {
 
                 <li style={{textDecoration:'none'}} >
                      <a  style={{textDecoration:'none'}} > <Link to="/dashbordProfissional"> Inicio </Link> </a>
-                     <a> <Link to="/ClienteAgenda"> Agenda </Link> </a>
-                     <a> <Link to="/dashbordCliente"> Serviços </Link> </a>
+                     <a> <Link to="/profissionalAgenda"> Agenda </Link> </a>
+                     {/* <a> <Link to="/dashbord"> Serviços </Link> </a> */}
                 </li>
 
 

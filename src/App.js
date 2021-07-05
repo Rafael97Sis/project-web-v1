@@ -27,6 +27,8 @@ function App() {
 
         <Route exact path='/ClienteAgenda' component={ClienteAgenda} />
 
+        <Route exact path='/profissionalAgenda' component={ClienteAgenda} />
+
         <Route exact path='/clienteAgendamentos' component={ClienteAgendamentos} />
 
         <Route exact path='/dashbordCliente' component={DashbordCliente} />

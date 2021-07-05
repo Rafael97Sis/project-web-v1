@@ -7,31 +7,50 @@ function NavBar() {
 
     return (
 
-        <div className='container-NavBar'>
+        <div>
 
-            <a href="/">
-            {/* <Link to="/"/> */}
-                <img className='icon-navBar' src='/logotipo_indie.svg' to="/" /> 
-            </a>
-           
+                <ul className='box-ul' style={{ listStyle: 'none' }}>
+                    <li className='listaLinks' >
 
-            <div className='Botoes-Barra-Menu' >
+                        <a href="/">
+                            {/* <Link to="/"/> */}
+                            <img className='icon-navBar' src='/logotipo_indie.svg' to="/" />
+                        </a>
 
-                <ul  style={{listStyle:'none'}}>
-                    <li  style={{textDecoration:'none'}}>
-                        <a style={{textDecoration:'none'}}> <Link to="/">  Pagina Inicial </Link> </a>
-                        <a className='lista-menu'> <Link to="/Login"> Sobre nós </Link>  </a>
-                        <a className='lista-menu'> <Link> Preços </Link> </a>
-                        <a className='lista-menu'> <Link> Contato </Link>  </a>
-                        <a className='button-branco'  >
-                            <Link to='/Login'  style={{color:'#FFFFFF'}} >  ACESSAR CONTA </Link> </a>
+
                     </li>
+
+                    <li className='listaLinks'  style={{ textDecoration: 'none' }}>
+                        <a style={{ textDecoration: 'none' }}> <Link to="/">  Pagina Inicial </Link> </a>
+                    </li>
+
+                    <li className='listaLinks'>
+                        <a > <Link to="/Login"> Sobre nós </Link>  </a>
+                    </li>
+
+                    <li className='listaLinks'>
+                        <a > <Link> Preços </Link> </a>
+                    </li>
+
+                    <li className='listaLinks'>
+                        <a > 
+                            <Link> Contato </Link> 
+                        </a>
+                    </li>
+
+                    <li  className='listaLinks'>
+                        <a  src='/icon-login-home.svg' to='/Login' href='/Login'>
+                            <img src='/icon-login-home.svg' />
+                        </a>
+                    </li>
+
+                    <li className='listaLinks'>
+                        <a className='button-branco'  >
+                            <Link to='/Cadastro'> CRIE SUA CONTA </Link>
+                        </a>
+                    </li>
+
                 </ul>
-
-
-
-
-            </div>
 
         </div>
 
