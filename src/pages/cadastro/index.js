@@ -7,7 +7,7 @@ function Cadastro() {
 
   const baseURL = "http://localhost:3006/usuario";
 
-  const [cadastro, setCadastro] = useState({ nome: '', email: '', definicao: '', cpf_ou_cnpj: '', telefone: '', cep: '', endereco: '', nro: '', bairro: '', senha: '', area_de_atuacao: '', especialidade: '' })
+  const [cadastro, setCadastro] = useState({ nome: null, email: null, definicao: null, cpf_ou_cnpj: null, telefone: null, cep: null, endereco: null, nro: null, bairro: null, senha: null, area_de_atuacao: null, especialidade: null })
   //const [cadastroConta, setcadastroConta] = useState(cadastroContaState)
 
   const handleInputChange = (event) => {
@@ -15,16 +15,27 @@ function Cadastro() {
     setCadastro({ ...cadastro, [name]: value })
   }
 
-  async function Cadastrar(cadastro) {
-    // const response = await
-    fetch(baseURL, {
+  async function Cadastrar(e) {
+
+    e.preventDefault()
+
+
+
+    //if(!cadastro.nome || !cadastro.email || !cadastro.definicao || !cadastro.cpf_ou_cnpj || !cadastro.telefone || !cadastro.cep || cadastro.endereco || !cadastro.nro || !cadastro.bairro || !cadastro.senha || !cadastro.area_de_atuacao || !cadastro.especialidade) return;
+
+    const response = await fetch(baseURL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
       },
-      body: JSON.stringify(cadastro)
+      body: JSON.stringify(cadastro),
+
     });
+
+    setCadastro({ nome: null, email: null, definicao: null, cpf_ou_cnpj: null, telefone: null, cep: null, endereco: null, nro: null, bairro: null, senha: null, area_de_atuacao: null, especialidade: null })
+    alert("cadastro ok ")
+    console.log("response", response);
   }
 
   return (
@@ -35,18 +46,7 @@ function Cadastro() {
       <div className='container-form'>
         <h1 style={{ color: '#9346F4', fontSize: '25px' }}> Crie sua conta e comece já! </h1>
 
-        <form onSubmit={(event) => {
-          event.preventDefault();
-
-          
-
-          //if(!cadastro.nome || !cadastro.email || !cadastro.definicao || !cadastro.cpf_ou_cnpj || !cadastro.telefone || !cadastro.cep || cadastro.endereco || !cadastro.nro || !cadastro.bairro || !cadastro.senha || !cadastro.area_de_atuacao || !cadastro.especialidade) return;
-          
-          Cadastrar(cadastro)
-          setCadastro({ nome: '', email: '', definicao: '', cpf_ou_cnpj: '', telefone: '', cep: '', endereco: '', nro: '', bairro: '', senha: '', area_de_atuacao: '', especialidade: '' })
-          alert("cadastro ok ")
-        }}
-        >
+        <form onSubmit={Cadastrar}>
 
           <input
             className='form-dados-cadastro-1'
@@ -137,7 +137,7 @@ function Cadastro() {
 
             <option value="profissional"> Profissional </option>
 
-            
+
           </select >
 
 
@@ -170,7 +170,7 @@ function Cadastro() {
 
           </select>
 
-          <button className='button-cadastra'> Cadastrar </button>
+          <button type="submit" className='button-cadastra'> Cadastrar </button>
 
         </form>
 

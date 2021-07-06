@@ -7,6 +7,8 @@ function ClienteAgenda() {
 
   const baseURL = "http://localhost:3006/atendimento";
 
+  const [profissionais,setProfissionais] = useState([])
+
   const [atendimento, setAtendimento] = useState({ atividade: '', insumo:'', id_funcionario:'', data_agendada:'', status_atendimento:'', comentario:'' })
   //const [cadastroConta, setcadastroConta] = useState(cadastroContaState)
 
@@ -27,6 +29,19 @@ function ClienteAgenda() {
     });
   }
 
+  useEffect(async ()=>{
+
+    const response = await fetch("http://localhost:3006/usuario", {
+      method: "GET",
+    }).then(res => res.json());
+
+    setProfissionais(response)
+
+    //const responseFiltered = response.filter(item => item.definicao === "profissional")
+
+    //console.log("response",responseFiltered);
+
+  },[])
 
 
   return (
@@ -101,11 +116,22 @@ function ClienteAgenda() {
           <br />
           {/*  select Profissional  */}
           <h2 style={{ color: '#9346F4', fontSize: '18px', marginLeft: '20px' }} > Digite Profissional que Deseja ! </h2>
-          <input type='number' className="input-select"
+          {/*<input type='number' className="input-select"
             name='id_funcionario'
             value={atendimento.id_funcionario}
             onChange={handleInputChange}
-          />
+          />*/}
+          <select className="input-select"
+            name='insumo'
+            value={atendimento.insumo}
+            onChange={handleInputChange}
+          >
+            <option selected> - Insumo - </option>
+            {profissionais?.map(profissional => (
+              <option value={profissional.id}>{profissional.nome}</option>
+            ))}
+            
+          </select >
 
 
           <br /><br />
@@ -145,10 +171,10 @@ function ClienteAgenda() {
 
 
 
-        <div className='box-direita-foto' >
+       {/*  <div className='box-direita-foto' >
           <h2 className='title-foto'> + Add a foto ! </h2>
           <input className='input-img' type="image" src='/add-img.png' />
-        </div>
+        </div>*/}
 
       </form>
     </div>
