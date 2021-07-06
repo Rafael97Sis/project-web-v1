@@ -5,7 +5,7 @@ import './index.css'
 
 function Cadastro() {
 
-  const baseURL = "http://localhost:3006/cadastro";
+  const baseURL = "http://localhost:3006/usuario";
 
   const [cadastro, setCadastro] = useState({ nome: '', email: '', definicao: '', cpf_ou_cnpj: '', telefone: '', cep: '', endereco: '', nro: '', bairro: '', senha: '', area_de_atuacao: '', especialidade: '' })
   //const [cadastroConta, setcadastroConta] = useState(cadastroContaState)

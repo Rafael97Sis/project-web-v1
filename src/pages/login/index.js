@@ -5,7 +5,7 @@ import './index.css'
 
 function Login() {
 
-  const baseURL = "http://localhost:3006/cadastro/login";
+  const baseURL = "http://localhost:3006/usuario/login";
 
   const [usuario, setUsuario] = useState({ email: '', senha: '' })
   const handleInputChange = (event) => {
@@ -80,13 +80,14 @@ function Login() {
       const data = await response.json();
       sessionStorage.setItem("access-token", data.token);
       
-      if (data.definicao === "profissional") {
-        window.location.href = '/dashboardProfissional'
+      if (data.definicao === "funcionario") {
+        window.location.href = '/dashbordProfissional'
       }
       else { window.location.href = '/dashbordCliente';}
     }
     else if (response.status === 401) {
-      window.location.href = '/unauthorized';
+      window.alert("Ops, algum problema ocorreu!");
+      // window.location.href = '/unauthorized';
       
     } else {
       const data = await response.json();
