@@ -3,13 +3,21 @@ import './index.css'
 import NavBarCliente from "../../components/navBarCliente/navBarCliente";
 
 
+const atividade_insumo = {
+  "Eletrica": ["Passagem de cabeamento elétrico", "Passagem de cabeamento de rede", "Instalações gerais", "Manutenção de rede elétrica"],
+  "Infra": ['Hospedagem e manutenção de servidores', "Solicitações de software", "Solicitações de hardware"],
+  "Segurança": ["Monitoramento residencial", "Firewall e anti-vírus", "Quarentena e controle de perdas"],
+  "Serviços Gerais": ["Manutenção, instalação e reposição de móveis, tomadas e luminárias elétricas", "Implantação de resfriamento por metro quadrado", "Instalação de aparelhagem (servidores)"],
+  "TI": ["Analista de suporte telecom", "banco de dados", "Infra", "analista de suporte N1", "analista de suporte N2"]
+}
+
 function ClienteAgenda() {
 
   const baseURL = "http://localhost:3006/atendimento";
 
-  const [profissionais,setProfissionais] = useState([])
+  const [profissionais, setProfissionais] = useState([])
 
-  const [atendimento, setAtendimento] = useState({ atividade: '', insumo:'', id_funcionario:'', data_agendada:'', status_atendimento:'', comentario:'' })
+  const [atendimento, setAtendimento] = useState({ atividade: null, insumo: null, id_funcionario: null, data_agendada: null, status_atendimento: null, comentario: null })
   //const [cadastroConta, setcadastroConta] = useState(cadastroContaState)
 
   const handleInputChange = (event) => {
@@ -29,19 +37,22 @@ function ClienteAgenda() {
     });
   }
 
-  useEffect(async ()=>{
+  useEffect(async () => {
 
     const response = await fetch("http://localhost:3006/usuario", {
       method: "GET",
     }).then(res => res.json());
 
-    setProfissionais(response)
+    const responseFiltered = response.filter(item => item.definicao === "funcionario")
 
-    //const responseFiltered = response.filter(item => item.definicao === "profissional")
+    setProfissionais(responseFiltered)
+
 
     //console.log("response",responseFiltered);
 
-  },[])
+  }, [])
+
+  console.log('atendimento', atendimento);
 
 
   return (
@@ -52,7 +63,7 @@ function ClienteAgenda() {
         event.preventDefault();
 
         Adicionar(atendimento)
-        setAtendimento({ atividade: '', insumo:'', id_funcionario:'', data_agendada:'', status_atendimento:'', comentario:''  })
+        setAtendimento({ atividade: null, insumo: null, id_funcionario: null, data_agendada: null, status_atendimento: null, comentario: null })
         alert("cadastro ok ")
       }}
 
@@ -93,24 +104,9 @@ function ClienteAgenda() {
             onChange={handleInputChange}
           >
             <option selected> - Insumo - </option>
-            <option value="Instalações gerais"> Instalações gerais </option>
-            <option value="Manutenção de rede elétrica"> Manutenção de rede elétrica </option>
-            <option value="Passagem de cabeamento de rede"> Passagem de cabeamento de rede </option>
-            <option value="Passagem de cabeamento elétrico"> Passagem de cabeamento elétrico </option>
-            <option value="Hospedagem e manutenção de servidores"> Hospedagem e manutenção de servidores</option>
-            <option value="Solicitações de software"> Solicitações de software </option>
-            <option value="Solicitações de hardware"> Solicitações de hardware </option>
-            <option value="Monitoramento residencial"> Monitoramento residencial </option>
-            <option value="Firewall e anti-vírus"> Firewall e anti-vírus  </option>
-            <option value="Quarentena e controle de perdas"> Quarentena e controle de perdas </option>
-            <option value="Manutenção, instalação e reposição de móveis, tomadas e luminárias elétricas ">Manutenção, instalação e reposição de móveis, tomadas e luminárias elétricas  </option>
-            <option value="Implantação de resfriamento por metro quadrado">Implantação de resfriamento por metro quadrado  </option>
-            <option value="Instalação de aparelhagem (servidores)">Instalação de aparelhagem (servidores)  </option>
-            <option value="Analista de suporte telecom">Analista de suporte telecom  </option>
-            <option value="banco de dados"> banco de dados </option>
-            <option value="Infra"> Infra </option>
-            <option value="analista de suporte N1"> analista de suporte N1 </option>
-            <option value="analista de suporte N2"> analista de suporte N2 </option>
+            {atividade_insumo[atendimento.atividade]?.map(atividade => (
+              <option value={atividade}>{atividade}</option>
+            ))}
 
           </select >
           <br />
@@ -122,15 +118,15 @@ function ClienteAgenda() {
             onChange={handleInputChange}
           />*/}
           <select className="input-select"
-            name='insumo'
-            value={atendimento.insumo}
+            name='id_funcionario'
+            value={atendimento.id_funcionario}
             onChange={handleInputChange}
           >
-            <option selected> - Insumo - </option>
+            <option selected> - Funcionário - </option>
             {profissionais?.map(profissional => (
               <option value={profissional.id}>{profissional.nome}</option>
             ))}
-            
+
           </select >
 
 
@@ -138,12 +134,12 @@ function ClienteAgenda() {
           <h2 style={{ color: '#9346F4', fontSize: '18px', marginLeft: '20px' }} >
             Selecione dia e hora ! </h2>
 
-          {/* <input className='input-date' type="number"
-            name='data_agendada '
-            // value={atendimento.data_agendada }
-            // onChange={handleInputChange}
-          /> */}
-          
+          <input className='input-date' type="date"
+            name='data_agendada'
+            value={atendimento.data_agendada}
+            onChange={handleInputChange}
+          />
+
           <br />
 
           <br />
@@ -152,10 +148,10 @@ function ClienteAgenda() {
             <h2 style={{ color: '#9346F4', fontSize: '18px', marginLeft: '23px' }} >Descricao do Servico:</h2>
             {/* <label className='title-msg' for="msg" >Mensagem:</label> */}
             <textarea className='input-comentario'
-              id="msg" 
+              id="msg"
               placeholder="Descricao do Servico:"
               name='comentario'
-              value={atendimento.comentario }
+              value={atendimento.comentario}
               onChange={handleInputChange}
             ></textarea>
           </div>
@@ -171,7 +167,7 @@ function ClienteAgenda() {
 
 
 
-       {/*  <div className='box-direita-foto' >
+        {/*  <div className='box-direita-foto' >
           <h2 className='title-foto'> + Add a foto ! </h2>
           <input className='input-img' type="image" src='/add-img.png' />
         </div>*/}

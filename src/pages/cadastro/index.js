@@ -3,12 +3,22 @@ import NavBar from "../../components/navBar/navBar";
 
 import './index.css'
 
+const atividade_insumo = {
+  "Eletrica": ["Passagem de cabeamento elétrico", "Passagem de cabeamento de rede", "Instalações gerais", "Manutenção de rede elétrica"],
+  "Infra": ['Hospedagem e manutenção de servidores', "Solicitações de software", "Solicitações de hardware"],
+  "Segurança": ["Monitoramento residencial", "Firewall e anti-vírus", "Quarentena e controle de perdas"],
+  "Serviços Gerais": ["Manutenção, instalação e reposição de móveis, tomadas e luminárias elétricas", "Implantação de resfriamento por metro quadrado", "Instalação de aparelhagem (servidores)"],
+  "TI": ["Analista de suporte telecom", "banco de dados", "Infra", "analista de suporte N1", "analista de suporte N2"]
+}
+
 function Cadastro() {
 
   const baseURL = "http://localhost:3006/usuario";
 
   const [cadastro, setCadastro] = useState({ nome: null, email: null, definicao: null, cpf_ou_cnpj: null, telefone: null, cep: null, endereco: null, nro: null, bairro: null, senha: null, area_de_atuacao: null, especialidade: null })
   //const [cadastroConta, setcadastroConta] = useState(cadastroContaState)
+
+  console.log('cadastro', cadastro);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target
@@ -19,7 +29,25 @@ function Cadastro() {
 
     e.preventDefault()
 
+    if (cadastro.senha !== e.target.confirmaSenha.value) {
+      alert('A senha de confimação não confere!')
+      return;
+    }
 
+    if (!cadastro.definicao) {
+      alert('Escolha seu perfil!')
+      return;
+    }
+
+    if (!cadastro.area_de_atuacao) {
+      alert('Escolha seu area de atuação!')
+      return;
+    }
+
+    if (!cadastro.especialidade) {
+      alert('Escolha sua especialidade!')
+      return;
+    }
 
     //if(!cadastro.nome || !cadastro.email || !cadastro.definicao || !cadastro.cpf_ou_cnpj || !cadastro.telefone || !cadastro.cep || cadastro.endereco || !cadastro.nro || !cadastro.bairro || !cadastro.senha || !cadastro.area_de_atuacao || !cadastro.especialidade) return;
 
@@ -49,6 +77,7 @@ function Cadastro() {
         <form onSubmit={Cadastrar}>
 
           <input
+            required
             className='form-dados-cadastro-1'
             name='nome'
             type='text'
@@ -59,6 +88,7 @@ function Cadastro() {
 
 
           <input
+            required
             className='form-dados-cadastro-1'
             type='number'
             name='cep'
@@ -68,6 +98,7 @@ function Cadastro() {
           />
 
           <input
+            required
             className='form-dados-cadastro-1'
             name='email'
             type='email'
@@ -76,6 +107,7 @@ function Cadastro() {
             placeholder="Digite Email:" />
 
           <input
+            required
             className='form-dados-cadastro-1'
             name='endereco'
             type='text'
@@ -84,6 +116,7 @@ function Cadastro() {
             placeholder="Endereço:" />
 
           <input
+            required
             className='form-dados-cadastro-1'
             name='cpf_ou_cnpj'
             type='number'
@@ -92,6 +125,7 @@ function Cadastro() {
             placeholder="CNPJ ou CPF :" />
 
           <input
+            required
             className='form-dados-cadastro-1'
             type='number'
             name='nro'
@@ -100,6 +134,7 @@ function Cadastro() {
             placeholder='Nº ' />
 
           <input
+            required
             className='form-dados-cadastro-1'
             type='number'
             name='telefone'
@@ -108,6 +143,7 @@ function Cadastro() {
             placeholder='Telefone:' />
 
           <input
+            required
             className='form-dados-cadastro-1'
             name='bairro'
             type='text'
@@ -116,6 +152,7 @@ function Cadastro() {
             placeholder="Bairro:" />
 
           <input
+            required
             className='form-dados-cadastro-1'
             name='senha'
             type='password'
@@ -123,7 +160,7 @@ function Cadastro() {
             onChange={handleInputChange}
             placeholder="Senha:" />
 
-          <input className='form-dados-cadastro-1' name='senha' type='password' placeholder="Confirmar Senha:" />
+          <input required className='form-dados-cadastro-1' name='confirmaSenha' type='password' placeholder="Confirmar Senha:" />
 
           <h2 style={{ color: '#9346F4', fontSize: '16px' }} > Vocé é um cliente ou profissional? </h2>
 
@@ -132,44 +169,52 @@ function Cadastro() {
             value={cadastro.definicao}
             onChange={handleInputChange}
           >
-            <option selected> Selecione seu tipo de Perfil </option>
+            <option value={null} selected> Selecione seu tipo de Perfil </option>
             <option value="cliente"> Cliente </option>
 
-            <option value="profissional"> Profissional </option>
+            <option value="funcionario"> Profissional </option>
 
 
           </select >
 
 
-          <h2 style={{ color: '#9346F4', fontSize: '16px' }} > Qual sua área de Atuação? </h2>
+          {cadastro.definicao === 'funcionario' ?
+            <>
+              <h2 style={{ color: '#9346F4', fontSize: '16px' }} > Qual sua área de Atuação? </h2>
 
-          <select className="segmento"
-            name='area_de_atuacao'
-            value={cadastro.area_de_atuacao}
-            onChange={handleInputChange}
-          >
-            <option selected> Selecione sua Area de Atuação ! </option>
-            <option value="informatica">Informatica</option>
-            <option value="eletrica">Eletrica</option>
+              <select className="segmento"
+                name='area_de_atuacao'
+                value={cadastro.area_de_atuacao}
+                onChange={handleInputChange}
+              >
+                <option value={null} selected> Selecione sua Area de Atuação ! </option>
+                {/* <option selected> - Atividade - </option> */}
+                <option value="Eletrica"> Eletrica </option>
+                <option value="Infra"> Infra </option>
+                <option value="Segurança"> Segurança </option>
+                <option value="Serviços Gerais"> Serviços Gerais </option>
+                <option value="TI"> TI </option>
 
-          </select>
+              </select>
 
-          {/* inicio Especialidade  */}
-          <h2 style={{ color: '#9346F4', fontSize: '16px' }} >  Qual sua Especialidade ? </h2>
+              {/* inicio Especialidade  */}
+              <h2 style={{ color: '#9346F4', fontSize: '16px' }} >  Qual sua Especialidade ? </h2>
 
-          <select className="segmento"
-            name='especialidade'
-            value={cadastro.especialidade}
-            onChange={handleInputChange}
-          >
-            <option selected > Selecione sua Especialidade! </option>
-            <option value="informatica">DBA</option>
-            <option value="eletrica">Eletrica</option>
-            <option value="informatica">Pragramador</option>
-            <option value="informatica">Tecnico Informatica </option>
+              <select className="segmento"
+                name='especialidade'
+                value={cadastro.especialidade}
+                onChange={handleInputChange}
+              >
+                <option value={null} selected > Selecione sua Especialidade! </option>
+                {atividade_insumo[cadastro.area_de_atuacao]?.map(atividade => (
+                  <option value={atividade}>{atividade}</option>
+                ))}
 
-          </select>
+              </select>
+            </>
 
+            : <></>
+          }
           <button type="submit" className='button-cadastra'> Cadastrar </button>
 
         </form>
